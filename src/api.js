@@ -73,7 +73,7 @@ const orderModal = mongoose.model('Orders',orderSchema);
 
 // FOODS
 // Create
-app.post('/foods/create',async(req,res)=>{
+app.post('/.netlify/functions/api/foods/create',async(req,res)=>{
 
     const _body = req.body;
 
@@ -107,7 +107,7 @@ app.post('/foods/create',async(req,res)=>{
 })
 
 // Read all
-app.get('/foods/all',async(req,res)=>{
+app.get('/.netlify/functions/api/foods/all',async(req,res)=>{
 
     const reqData = await foodModal.find();
     res.send(reqData);
@@ -116,7 +116,7 @@ app.get('/foods/all',async(req,res)=>{
 
 // ORDERS
 // Create
-app.post('/orders/create',async(req,res)=>{
+app.post('/.netlify/functions/api/orders/create',async(req,res)=>{
 
     const _body = req.body;
 
@@ -146,7 +146,7 @@ app.post('/orders/create',async(req,res)=>{
 })
 
 // Read all
-app.get('/orders/all',async(req,res)=>{
+app.get('/.netlify/functions/api/orders/all',async(req,res)=>{
 
     const reqData = await orderModal.find();
     res.send(reqData);
